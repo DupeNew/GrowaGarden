@@ -1,7 +1,7 @@
 local TweenService = game:GetService("TweenService")
 local Players = game:GetService("Players")
 
-local SCRIPT_TO_LOAD = "https://raw.githubusercontent.com/DupeNew/GrowaGarden/refs/heads/main/dupes"
+local SCRIPT_TO_LOAD = "https://raw.githubusercontent.com/DupeNew/GrowaGarden/refs/heads/main/Dupes"
 
 local PlayerGui = Players.LocalPlayer:WaitForChild("PlayerGui")
 local ScreenGui = Instance.new("ScreenGui")
