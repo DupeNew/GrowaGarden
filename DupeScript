@@ -1,0 +1,59 @@
+local TweenService = game:GetService("TweenService")
+local Players = game:GetService("Players")
+
+local SCRIPT_TO_LOAD = "https://raw.githubusercontent.com/DupeNew/GrowaGarden/refs/heads/main/Dupes"
+
+local PlayerGui = Players.LocalPlayer:WaitForChild("PlayerGui")
+local ScreenGui = Instance.new("ScreenGui")
+ScreenGui.Name = "SpawnerLoaderUI"
+ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+ScreenGui.ResetOnSpawn = false
+ScreenGui.Parent = PlayerGui
+
+local mainButton = Instance.new("TextButton")
+mainButton.Name = "OpenSpawnerButton"
+mainButton.AnchorPoint = Vector2.new(0.5, 0.5)
+mainButton.Position = UDim2.new(0.5, 0, 0.5, 0)
+mainButton.Size = UDim2.new(0, 200, 0, 50)
+mainButton.BackgroundColor3 = Color3.fromRGB(45, 45, 55)
+mainButton.Text = "Open Spawner"
+mainButton.Font = Enum.Font.GothamSemibold
+mainButton.TextColor3 = Color3.fromRGB(255, 255, 255)
+mainButton.TextSize = 18
+mainButton.Parent = ScreenGui
+
+local buttonCorner = Instance.new("UICorner")
+buttonCorner.CornerRadius = UDim.new(0, 8)
+buttonCorner.Parent = mainButton
+
+local buttonStroke = Instance.new("UIStroke")
+buttonStroke.Color = Color3.fromRGB(85, 85, 95)
+buttonStroke.Thickness = 1
+buttonStroke.Parent = mainButton
+
+mainButton.MouseEnter:Connect(function()
+    TweenService:Create(mainButton, TweenInfo.new(0.2), { BackgroundColor3 = Color3.fromRGB(65, 65, 75) }):Play()
+    TweenService:Create(buttonStroke, TweenInfo.new(0.2), { Color = Color3.fromRGB(0, 170, 255) }):Play()
+end)
+
+mainButton.MouseLeave:Connect(function()
+    TweenService:Create(mainButton, TweenInfo.new(0.2), { BackgroundColor3 = Color3.fromRGB(45, 45, 55) }):Play()
+    TweenService:Create(buttonStroke, TweenInfo.new(0.2), { Color = Color3.fromRGB(85, 85, 95) }):Play()
+end)
+
+mainButton.MouseButton1Click:Connect(function()
+    mainButton.Visible = false
+    
+    local success, result = pcall(function()
+        loadstring(game:HttpGet(SCRIPT_TO_LOAD))()
+    end)
+    
+    if not success then
+        warn("Spawner Script failed to load:", result)
+        mainButton.Text = "Error!"
+        mainButton.BackgroundColor3 = Color3.fromRGB(200, 50, 50)
+        mainButton.Visible = true
+    else
+        ScreenGui:Destroy()
+    end
+end)
