@@ -1,6 +1,3 @@
---// Data Source: PetEggData.lua
---// Contains the metadata for each egg type.
-
 return {
 	["Common Egg"] = { EggName = "Common Egg", EggRarity = "Common" },
 	["Uncommon Egg"] = { EggName = "Uncommon Egg", EggRarity = "Uncommon" },
