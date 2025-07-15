@@ -1,6 +1,3 @@
---// Data Source: PetEggs.lua
---// Contains the loot table information for each egg.
-
 return {
 	["Legendary Egg"] = {
 		RarityData = { Items = { ["Silver Monkey"] = { ItemOdd = 20 }, Cow = { ItemOdd = 20 }, ["Sea Otter"] = { ItemOdd = 5 }, Turtle = { ItemOdd = 1 }, ["Polar Bear"] = { ItemOdd = 1 } } }
