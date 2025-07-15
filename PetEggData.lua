@@ -1,0 +1,27 @@
+--// Data Source: PetEggData.lua
+--// Contains the metadata for each egg type.
+
+return {
+	["Common Egg"] = { EggName = "Common Egg", EggRarity = "Common" },
+	["Uncommon Egg"] = { EggName = "Uncommon Egg", EggRarity = "Uncommon" },
+	["Rare Egg"] = { EggName = "Rare Egg", EggRarity = "Rare" },
+	["Legendary Egg"] = { EggName = "Legendary Egg", EggRarity = "Legendary" },
+	["Mythical Egg"] = { EggName = "Mythical Egg", EggRarity = "Mythical" },
+	["Bug Egg"] = { EggName = "Bug Egg", EggRarity = "Divine" },
+	["Exotic Bug Egg"] = { EggName = "Exotic Bug Egg", EggRarity = "Divine" },
+	["Night Egg"] = { EggName = "Night Egg", EggRarity = "Divine" },
+	["Bee Egg"] = { EggName = "Bee Egg", EggRarity = "Divine" },
+	["Anti Bee Egg"] = { EggName = "Anti Bee Egg", EggRarity = "Divine" },
+	["Premium Anti Bee Egg"] = { EggName = "Premium Anti Bee Egg", EggRarity = "Divine" },
+	["Premium Night Egg"] = { EggName = "Premium Night Egg", EggRarity = "Divine" },
+	["Common Summer Egg"] = { EggName = "Common Summer Egg", EggRarity = "Common" },
+	["Rare Summer Egg"] = { EggName = "Rare Summer Egg", EggRarity = "Rare" },
+	["Paradise Egg"] = { EggName = "Paradise Egg", EggRarity = "Mythical" },
+	["Oasis Egg"] = { EggName = "Oasis Egg", EggRarity = "Divine" },
+	["Premium Oasis Egg"] = { EggName = "Premium Oasis Egg", EggRarity = "Divine" },
+	["Dinosaur Egg"] = { EggName = "Dinosaur Egg", EggRarity = "Divine" },
+	["Primal Egg"] = { EggName = "Primal Egg", EggRarity = "Divine" },
+	["Premium Primal Egg"] = { EggName = "Premium Primal Egg", EggRarity = "Divine" },
+	["Rainbow Premium Primal Egg"] = { EggName = "Rainbow Premium Primal Egg", EggRarity = "Divine" },
+	["Fake Egg"] = { EggName = "Fake Egg", EggRarity = "Divine" },
+}
